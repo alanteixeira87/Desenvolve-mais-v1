@@ -99,8 +99,9 @@
     height: 450px;
     margin-inline: auto;
     align-items: center;
-    background-image: url(../img/Background.png);
-    
+    background: linear-gradient(90deg, var(--color-green-3490, rgba(46, 125, 50, 0.90)) 0%, var(--color-azure-4290, rgba(21, 101, 192, 0.90)) 100%);
+Linear Gradient
+;
 }
 .container h1 {
     
