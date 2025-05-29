@@ -99,7 +99,7 @@
     height: 450px;
     margin-inline: auto;
     align-items: center;
-    background-image: url(/img/Background.png);
+    background-image: url(../img/Background.png);
     
 }
 .container h1 {
