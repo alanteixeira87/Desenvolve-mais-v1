@@ -99,8 +99,7 @@
     height: 450px;
     margin-inline: auto;
     align-items: center;
-    
-    background-image: url(../img/Background.png); 
+    background-image: url(/img/Background.png);
     
 }
 .container h1 {
@@ -117,9 +116,10 @@
     
 }
 
-.texto {
+.container a {
+    display: block;
+    max-width: 550px;
 
-    width: 560.14px;
     height: 56px;
     font-size: 16px;
     color: var(--color-white-solid, #FFF);
@@ -133,8 +133,8 @@
 
 
 
-.input {
-    margin-top: 14px;
+.inputpesquisar {
+   margin-top: 14px;
     display: flex;
     width: 600px;
     padding: 8px;
@@ -149,7 +149,7 @@
     appearance: none;
     outline: none;
     border: none;
-
+    
 
 }
 
@@ -157,18 +157,16 @@
 
 .textopesquisa {
 
-    border-radius: 8px; 
+     border-radius: 8px; 
     border-color: none;
     display: flex;   
     width: 500.47px;
     padding: 10px 6px 10px 6px;
     font-size: 12px;
     
-    
 }
 
-.bntpesquisar {
-     
+.bntpesquisar1 {
     margin-left: 10px;
     width: 150.867px;
     color: white;
@@ -181,9 +179,9 @@
     border-radius: 8px;
     font-family: poppins;
     cursor: pointer;
-    
-
 }
+    
+    
 
 .indicadores {
    width: 600;
@@ -193,7 +191,7 @@
     font-family: var(--font-family-Font-1, Poppins);
     font-style: normal;
     line-height: var(--line-height-18, 20px); /* 140% */
-    margin-left: 8%;
+    margin-left: 4%;
     display: flex;
     gap: 90PX;
     text-align: center;
@@ -205,7 +203,7 @@
 .container2 {
     
     max-width: 1440px;
-    max-height: 650px;
+    min-width: none;
     margin-inline: auto;
     font-family: poppins;
     display: grid;
@@ -221,15 +219,12 @@
 
 .container2 h1{
 
-    color: var(--color-azure-5, #020817);
-    
-    font-family: var(--font-family-Font-1, Poppins); 
-    font-size: var(--font-size-30, 30px);
-    font-style: normal;
-    font-weight: var(--font-weight-700, 700);
-    line-height: var(--line-height-36, 36px); /* 120% */
-    text-align: center;
-    padding: 20px;
+  color: var(--color-azure-5, #020817);
+  text-align: center;
+  font-family: poppins;
+  margin-inline: auto;
+  max-width: 1400px;
+  margin-top: 2%;
 
 
 
@@ -239,32 +234,47 @@
 
 .container2 a{
    color: var(--color-azure-34, #4B5563);
-    text-align: center;
-    font-family: var(--font-family-Font-1, poppins);
-    font-size: var(--font-size-18, 18px);
-    font-style: normal;
-    font-weight: var(--font-weight-400, 400);
-    line-height: var(--line-height-28, 28px); 
-    display: flex;
-    width: 768px;
-    max-width: var(--width-768, 768px);
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-left: 20%;
-    margin-bottom: 2%;
+    
+   text-align: center;
+    
+   font-family: poppins;
+   margin-inline: auto;
+   max-width: 1400px;
+   margin-bottom: 4%;
+   
     
 
 }
 
 .imgsize {
-    max-width: 33%;
+    min-width: 300px;
+    object-fit: contain;
 }
     
 .card-curso {
-    max-width: 1300;
-    margin-right: 0%;
+    max-width: 1400px;
+    margin-inline: auto;
+    font-family: poppins;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+  
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 20px;
+     font-family: poppins;
+     min-width: none;
+
+    
+    
 }
+
+
+
+
+
     
 
 
@@ -277,7 +287,13 @@
   padding-top: 20px;
 }
 
-
+.destaque {
+   color: var(--color-azure-5, #020817);
+  font-family: poppins;
+  margin-inline: auto;
+  max-width: 1400px;
+  margin-top: 2%;
+}
 
 .cards {
   display: grid;
@@ -287,13 +303,15 @@
 }
 
 .card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
+ max-width: 1440px;
+    min-width: none;
+    margin-inline: auto;
+    font-family: poppins;
+    display: grid;
+    align-items: center;
+    background-color: #f9fbfd;
+    padding-bottom: 2%;
+    text-align: center;
 }
 
 .card img {
@@ -357,9 +375,8 @@ button {
   font-family: poppi;
 }
 
-button:hover {
-  background-color: #1b5e20;
-}
+
+
 
 
 
@@ -624,3 +641,110 @@ button:hover {
   color: #777;
   padding-bottom: 2%;
 }
+
+/*Login*/
+
+.containerlogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-login {
+    background-color: #fff;
+    border: 1px solid #dbe1e7;
+    border-radius: 8px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+
+/* ========================
+   Abas (Login e Cadastro)
+======================== */
+.abas {
+    display: flex;
+    border-bottom: 1px solid #dbe1e7;
+    margin-bottom: 20px;
+}
+
+.aba {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.aba.ativa {
+    color: #1967d2;
+    border-bottom: 2px solid #1967d2;
+}
+
+/* ========================
+   Formulários
+======================== */
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+input1 {
+    padding: 10px;
+    border: 1px solid #dcdfe3;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #1967d2;
+}
+
+
+
+
+@media screen and (max-width:900px) {
+
+  .container {
+    flex-direction: column;
+    height: 300px;
+  }
+
+  
+  
+  .container1 {
+    flex-direction: column;
+  }
+
+  .card-curso {
+    flex-direction: column;
+  } 
+  .container2 {
+    flex-direction: column;
+  }
+  /*menu superior*/
+  .nav,.bnt,.inputpesquisar,.textopesquisa, .bntpesquisar1, .indicadores{
+    display: none;
+
+  }
+  .texto {
+    flex-direction: column;
+    font-size: 10px;
+  }
+
+}
+  

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body>
+     <div class="header1" >
+      
+        <header  class="header">
+             <nav class="nav">
+                    <img class="logo" src="img/Frame 136 (1).png">
+                    <ul class="nav-list">
+                         <li><a href="#">Vagas de Emprego</a></li>
+                         <li><a href="#">Guia de Orientação</a></li>
+                         <li><a href="#">Mentores</a></li>
+                         
+                    </ul>
+                    <div class="bnt" type="submit"> <a href="login.html" target="_self" text-decoration="none"> Login | Cadastrar-se </a> 
+                    </div>
+             </nav>
+
+
+        </header>
+
+        <div class="containerlogin">
+        <div class="card-login">
+            <!-- Abas -->
+            <div class="abas">
+                <button id="btnLogin" class="aba ativa">Login</button>
+                <button id="btnCadastro" class="aba">Cadastrar-se</button>
+            </div>
+
+            <!-- Formulário Login -->
+            <form id="formLogin" class="formulario">
+                <label>E-mail</label>
+                <input type="email" placeholder="seu@email.com" required>
+
+                <label>Senha</label>
+                <input type="password" placeholder="********" required>
+
+                <a href="resetpassword.html" class="link-senha">Esqueci minha senha</a> 
+
+                <button type="submit" class="botaologin">Entrar</button>
+            </form>
+
+            <!-- Formulário Cadastro -->
+            <form id="formCadastro" class="formulario oculto">
+                <label>Nome</label>
+                <input type="text" placeholder="Digite seu nome" required>
+
+                <label>E-mail</label>
+                <input type="email" placeholder="seu@email.com" required>
+
+                <label>Senha</label>
+                <input type="password" placeholder="********" required>
+
+                <button type="submit" class="botaologin">Cadastrar</button>
+            </form>
+        </div>
+
+        
+    </div>
+
+    <!-- Script -->
+    <script>
+        const btnLogin = document.getElementById('btnLogin');
+        const btnCadastro = document.getElementById('btnCadastro');
+        const formLogin = document.getElementById('formLogin');
+        const formCadastro = document.getElementById('formCadastro');
+
+        // Função para alternar abas
+        function abrirAba(aba) {
+            if (aba === 'login') {
+                formLogin.classList.remove('oculto');
+                formCadastro.classList.add('oculto');
+                btnLogin.classList.add('ativa');
+                btnCadastro.classList.remove('ativa');
+            } else {
+                formLogin.classList.add('oculto');
+                formCadastro.classList.remove('oculto');
+                btnLogin.classList.remove('ativa');
+                btnCadastro.classList.add('ativa');
+            }
+        }
+
+        // Eventos dos botões
+        btnLogin.addEventListener('click', () => abrirAba('login'));
+        btnCadastro.addEventListener('click', () => abrirAba('cadastro'));
+
+        // Acesso direto via URL (ex: index.html#cadastro)
+        window.addEventListener('load', () => {
+            if (window.location.hash === '#cadastro') {
+                abrirAba('cadastro');
+            }
+        });
+    </script>
+</body>
+</body>
+</html>
